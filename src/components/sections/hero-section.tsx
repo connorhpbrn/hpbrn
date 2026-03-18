@@ -17,10 +17,6 @@ export function HeroSection() {
           <p className="max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
             {hero.intro}
           </p>
-
-          <p className="max-w-2xl text-sm leading-relaxed text-zinc-500 sm:text-[15px]">
-            {hero.supportingLine}
-          </p>
         </div>
       </Reveal>
     </section>

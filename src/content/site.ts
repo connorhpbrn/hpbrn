@@ -27,8 +27,6 @@ export const hero = {
     "I build AI products, experimental tools, and clean software for the internet.",
   intro:
     "I’m interested in interfaces, agents, product design, and making complex systems feel clear. Most of my work sits somewhere between software, ideas, and experimentation.",
-  supportingLine:
-    "Currently building, writing, and exploring what better software looks like in an AI-native world.",
 };
 
 export const socialLinks: SocialLink[] = [
@@ -66,15 +64,33 @@ export const projects: Project[] = [
 
 export const writing: WritingEntry[] = [
   {
+    title: "Agency Over Credentials",
+    description:
+      "A piece on why high-agency builders with real depth will outperform credential-heavy operators in an AI-shaped economy.",
+    href: "https://x.com/connorhpbrn/status/2034227118272393583?s=20",
+  },
+  {
     title: "The New Luxury Is Being Unreachable",
     description:
       "A piece about status, attention, and why restraint is becoming the new signal.",
+    href: "https://x.com/connorhpbrn/status/2033269746146091211?s=20",
+  },
+  {
+    title: "The New Economy Depends on Human Surplus",
+    description:
+      "A take on how consumer tech is adapting to a world where more people have less leverage and more attention to monetize.",
+    href: "https://x.com/connorhpbrn/status/2032566411009446028?s=20",
   },
   {
     title: "The Interface Layer",
     description:
       "An idea I keep returning to: the real opportunity is often not the model, but the layer that makes software legible and usable for both humans and agents.",
     href: "https://x.com/connorhpbrn/status/2032188825808879649?s=20",
+  },
+  {
+    title: "Adoption Is the Bottleneck",
+    description:
+      "A note on why people and systems are the real limiter for AI progress, not just chips and raw compute.",
   },
 ];
 

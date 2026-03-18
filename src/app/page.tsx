@@ -8,7 +8,7 @@ import { WritingSection } from "@/components/sections/writing-section";
 export default function Home() {
   return (
     <main className="relative isolate min-h-screen">
-      <div className="mx-auto w-full max-w-5xl px-6 sm:px-10">
+      <div className="mx-auto w-full max-w-4xl px-6 sm:px-10">
         <HeroSection />
         <SelectedWorkSection />
         <WritingSection />
