@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { SpotlightText } from "@/components/ui/spotlight-text";
 import { socialLinks } from "@/content/site";
 
 export function ElsewhereSection() {
@@ -10,9 +11,10 @@ export function ElsewhereSection() {
       </Reveal>
 
       <Reveal delay={80}>
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:mt-7 sm:text-[15px]">
-          Best place to find me is usually on the internet.
-        </p>
+        <SpotlightText
+          text="Best place to find me is usually on the internet."
+          className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:mt-7 sm:text-[15px]"
+        />
       </Reveal>
 
       <Reveal delay={120}>
@@ -34,8 +36,10 @@ export function ElsewhereSection() {
 
       <Reveal delay={160}>
         <footer className="mt-12 border-t border-zinc-900/80 pt-6 text-xs text-zinc-500 sm:mt-14 sm:pt-7">
-          <p>Built with Next.js and TypeScript.</p>
-          <p className="mt-2">Simple for now. Easy to expand later.</p>
+          <SpotlightText
+            as="span"
+            text="Built with Next.js and TypeScript. Simple for now. Easy to expand later."
+          />
         </footer>
       </Reveal>
     </section>

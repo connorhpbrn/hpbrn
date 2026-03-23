@@ -32,6 +32,7 @@ export const hero = {
 export const socialLinks: SocialLink[] = [
   { label: "X", href: "https://x.com/connorhpbrn" },
   { label: "GitHub", href: "https://github.com/connorhpbrn" },
+  { label: "Insta", href: "https://instagram.com/connorhpbrn" },
   { label: "Email", href: "mailto:connorchepburn@gmail.com" },
 ];
 
@@ -91,6 +92,7 @@ export const writing: WritingEntry[] = [
     title: "Adoption Is the Bottleneck",
     description:
       "A note on why people and systems are the real limiter for AI progress, not just chips and raw compute.",
+    href: "https://x.com/connorhpbrn/status/2034985232558956567?s=20",
   },
 ];
 

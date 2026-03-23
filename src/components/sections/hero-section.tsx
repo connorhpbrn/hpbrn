@@ -1,5 +1,6 @@
 import { hero } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
+import { SpotlightText } from "@/components/ui/spotlight-text";
 
 export function HeroSection() {
   return (
@@ -10,13 +11,10 @@ export function HeroSection() {
             {hero.name}
           </h1>
 
-          <p className="max-w-2xl text-lg leading-relaxed text-zinc-200 sm:text-xl">
-            {hero.subheading}
-          </p>
-
-          <p className="max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-            {hero.intro}
-          </p>
+          <SpotlightText
+            text={hero.subheading}
+            className="max-w-2xl text-lg leading-relaxed text-zinc-200 sm:text-xl"
+          />
         </div>
       </Reveal>
     </section>

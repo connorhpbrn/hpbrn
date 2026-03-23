@@ -1,3 +1,5 @@
+import { SpotlightText } from "@/components/ui/spotlight-text";
+
 type SectionHeadingProps = {
   title: string;
   intro?: string;
@@ -10,7 +12,11 @@ export function SectionHeading({ title, intro }: SectionHeadingProps) {
         {title}
       </h2>
       {intro ? (
-        <p className="text-sm leading-relaxed text-zinc-400 sm:text-base">{intro}</p>
+        <SpotlightText
+          as="span"
+          text={intro}
+          className="block text-sm leading-relaxed text-zinc-400 sm:text-base"
+        />
       ) : null}
     </header>
   );

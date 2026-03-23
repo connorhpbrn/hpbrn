@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { SpotlightText } from "@/components/ui/spotlight-text";
 import { writing } from "@/content/site";
 
 export function WritingSection() {
@@ -16,39 +17,24 @@ export function WritingSection() {
         {writing.map((entry, index) => (
           <Reveal key={entry.title} delay={index * 55}>
             <article className="py-5 sm:py-6">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-base font-medium tracking-tight text-zinc-100 sm:text-lg">
-                  {entry.href ? (
-                    <a
-                      href={entry.href}
-                      className="story-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {entry.title}
-                    </a>
-                  ) : (
-                    entry.title
-                  )}
-                </h3>
+              <h3 className="text-base font-medium tracking-tight text-zinc-100 sm:text-lg">
                 {entry.href ? (
                   <a
                     href={entry.href}
-                    className="story-link shrink-0 text-xs uppercase tracking-[0.14em] text-zinc-500"
+                    className="story-link"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Read
+                    {entry.title}
                   </a>
                 ) : (
-                  <span className="shrink-0 text-xs uppercase tracking-[0.14em] text-zinc-600">
-                    Soon
-                  </span>
+                  entry.title
                 )}
-              </div>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
-                {entry.description}
-              </p>
+              </h3>
+              <SpotlightText
+                text={entry.description}
+                className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-[15px]"
+              />
             </article>
           </Reveal>
         ))}
