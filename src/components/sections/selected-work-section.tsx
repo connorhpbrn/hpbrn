@@ -5,7 +5,7 @@ import { projects } from "@/content/site";
 
 export function SelectedWorkSection() {
   return (
-    <section id="work" className="section-wrap border-t border-zinc-900/80">
+    <section id="work" className="section-wrap">
       <Reveal>
         <SectionHeading
           title="Selected Work"
@@ -13,7 +13,7 @@ export function SelectedWorkSection() {
         />
       </Reveal>
 
-      <div className="mt-8 divide-y divide-zinc-900/80 sm:mt-10">
+      <div className="mt-8 space-y-5 sm:mt-10 sm:space-y-6">
         {projects.map((project, index) => (
           <Reveal key={project.name} delay={index * 60}>
             <article className="py-5 sm:py-6">

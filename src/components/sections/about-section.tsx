@@ -5,7 +5,7 @@ import { aboutParagraphs } from "@/content/site";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-wrap border-t border-zinc-900/80">
+    <section id="about" className="section-wrap">
       <Reveal>
         <SectionHeading title="About" />
       </Reveal>

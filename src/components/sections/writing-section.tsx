@@ -5,7 +5,7 @@ import { writing } from "@/content/site";
 
 export function WritingSection() {
   return (
-    <section id="writing" className="section-wrap border-t border-zinc-900/80">
+    <section id="writing" className="section-wrap">
       <Reveal>
         <SectionHeading
           title="Writing"
@@ -13,7 +13,7 @@ export function WritingSection() {
         />
       </Reveal>
 
-      <div className="mt-8 divide-y divide-zinc-900/80 sm:mt-10">
+      <div className="mt-8 space-y-5 sm:mt-10 sm:space-y-6">
         {writing.map((entry, index) => (
           <Reveal key={entry.title} delay={index * 55}>
             <article className="py-5 sm:py-6">

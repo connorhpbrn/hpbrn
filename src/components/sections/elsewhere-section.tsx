@@ -5,7 +5,7 @@ import { socialLinks } from "@/content/site";
 
 export function ElsewhereSection() {
   return (
-    <section id="elsewhere" className="section-wrap border-t border-zinc-900/80 pb-16 sm:pb-20">
+    <section id="elsewhere" className="section-wrap pb-16 sm:pb-20">
       <Reveal>
         <SectionHeading title="Elsewhere" />
       </Reveal>
@@ -35,7 +35,7 @@ export function ElsewhereSection() {
       </Reveal>
 
       <Reveal delay={160}>
-        <footer className="mt-12 border-t border-zinc-900/80 pt-6 text-xs text-zinc-500 sm:mt-14 sm:pt-7">
+        <footer className="mt-12 pt-6 text-xs text-zinc-500 sm:mt-14 sm:pt-7">
           <SpotlightText
             as="span"
             text="Built with Next.js and TypeScript. Simple for now. Easy to expand later."

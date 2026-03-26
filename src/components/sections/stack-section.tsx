@@ -1,11 +1,12 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SpotlightText } from "@/components/ui/spotlight-text";
+import { TiltShineCard } from "@/components/ui/tilt-shine-card";
 import { stackGroups } from "@/content/site";
 
 export function StackSection() {
   return (
-    <section id="stack" className="section-wrap border-t border-zinc-900/80">
+    <section id="stack" className="section-wrap">
       <Reveal>
         <SectionHeading
           title="Stack"
@@ -16,7 +17,7 @@ export function StackSection() {
       <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6">
         {stackGroups.map((group, index) => (
           <Reveal key={group.name} delay={index * 65}>
-            <article className="rounded-2xl border border-zinc-900/80 bg-zinc-950/30 p-5 sm:p-6">
+            <TiltShineCard className="rounded-2xl p-5 sm:p-6">
               <h3 className="text-sm font-semibold tracking-[0.08em] text-zinc-300">
                 {group.name}
               </h3>
@@ -27,7 +28,7 @@ export function StackSection() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </TiltShineCard>
           </Reveal>
         ))}
       </div>
