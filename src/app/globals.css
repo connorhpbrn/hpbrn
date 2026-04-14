@@ -55,18 +55,6 @@ a {
   margin: 0 0 1.5rem 0;
   color: var(--terminal-blue);
   white-space: pre;
-  overflow: hidden;
-  border-right: 2px solid var(--terminal-blue);
-  animation: typing 1.5s steps(6) forwards, blink 0.6s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
 }
 
 .projects {
