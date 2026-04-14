@@ -1,23 +1,51 @@
-import { AboutSection } from "@/components/sections/about-section";
-import { ElsewhereSection } from "@/components/sections/elsewhere-section";
-import { HeroSection } from "@/components/sections/hero-section";
-import { SelectedWorkSection } from "@/components/sections/selected-work-section";
-import { StackSection } from "@/components/sections/stack-section";
-import { DotField } from "@/components/ui/dot-field";
-import { WritingSection } from "@/components/sections/writing-section";
+import { projects, socialLinks } from "@/content/site";
 
 export default function Home() {
   return (
-    <main className="relative isolate min-h-screen">
-      <DotField />
-      <div className="relative z-10 mx-auto w-full max-w-3xl px-6 sm:px-8">
-        <HeroSection />
-        <SelectedWorkSection />
-        <WritingSection />
-        <StackSection />
-        <AboutSection />
-        <ElsewhereSection />
-      </div>
+    <main className="terminal">
+      <pre className="title">{`████╗  ██╗ ██████╗  ██████╗  ██████╗  ███╗   ██╗
+ ██║  ██║ ██╔══██╗ ██╔══██╗ ██╔══██╗ ████╗  ██║
+ ███████║ ██████╔╝ ██████╔╝ ██████╔╝ ██╔██╗ ██║
+ ██╔══██║ ██╔═══╝  ██╔══██╗ ██╔══██╗ ██║╚██╗██║
+ ██║  ██║ ██║      ██████╔╝ ██║  ██║ ██║ ╚████║
+ ╚═╝  ╚═╝ ╚═╝      ╚═════╝  ╚═╝  ╚═╝ ╚═╝  ╚═══╝`}</pre>
+      <div className="terminal-line">╔══════════════════════════════════╗</div>
+      <div className="terminal-line">║  connor@hpbrn:~$ ./selected-work  ║</div>
+      <div className="terminal-line">╚══════════════════════════════════╝</div>
+
+      <section className="projects">
+        {projects.map((project, i) => (
+          <a 
+            key={project.name}
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+          >
+            <span className="project-index">[{i + 1}]</span>
+            <span className="project-name">{project.name}</span>
+            <span className="project-desc">— {project.descriptor}</span>
+          </a>
+        ))}
+      </section>
+
+      <footer className="footer">
+        <div className="terminal-line">════════════════════════════════</div>
+        <div className="terminal-prompt">connect:</div>
+        <div className="socials">
+          {socialLinks.map((link) => (
+            <a 
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              [{link.label}]
+            </a>
+          ))}
+        </div>
+      </footer>
     </main>
   );
 }

@@ -55,11 +55,11 @@ export const projects: Project[] = [
     body: "Kram AI was built around the idea that studying software should feel lighter, faster, and more useful. Less bloated dashboards, more direct value. It was an experiment in building something practical while keeping the product experience simple.",
     href: "https://www.kramai.app",
   },
-  {
-    name: "Human or Token",
-    descriptor: "A project around signal, noise, and internet behaviour.",
-    body: "This was part curiosity, part product idea. I’m interested in how online systems change when more of the participants are automated, incentivised, or synthetic. The project explored that tension through a product lens.",
-    href: "https://humanortoken.com",
+{
+    name: "Creed",
+    descriptor: "A .md file for agents to collab on context.",
+    body: "A shared context file that agents can read and write to. Think of it like a collective memory that persists across sessions and agents.",
+    href: "https://github.com/connorhpbrn/creed",
   },
 ];
 
