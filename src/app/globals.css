@@ -28,18 +28,88 @@ a {
 .terminal {
   max-width: 680px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem 3rem;
   color: var(--terminal-blue);
 }
 
-.ascii-art {
-  font-family: monospace;
-  font-size: 8px;
-  line-height: 8px;
-  white-space: pre;
-  text-align: center;
-  margin: 0 0 2rem 0;
+.command-line {
+  display: block;
+  min-height: 1.5rem;
   color: var(--terminal-blue);
+  font-size: 0.95rem;
+  white-space: pre;
+}
+
+.prompt {
+  color: var(--terminal-dim);
+}
+
+.typed-command {
+  color: #d4ecff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  background: #ffffff;
+  margin-left: -0.08ch;
+  vertical-align: text-bottom;
+}
+
+.cursor-live {
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+.cursor-submitted {
+  opacity: 0;
+}
+
+.output-block {
+  margin-top: 0.85rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.output-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-wrap {
+  margin: 0 0 1.6rem 0;
+}
+
+.ascii-line {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  min-height: 14px;
+  color: var(--terminal-blue);
+  white-space: pre;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.ascii-line-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.shell-block,
+.footer {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.shell-block.is-visible,
+.footer.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .terminal-line {
@@ -47,22 +117,23 @@ a {
   color: var(--terminal-dim);
 }
 
-.title {
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: left;
-  margin: 0 0 1.5rem 0;
-  color: var(--terminal-blue);
-  white-space: pre;
+.section-separator {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   padding-left: 1rem;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.projects.is-visible {
+  opacity: 1;
 }
 
 .project-link {
@@ -70,8 +141,19 @@ a {
   gap: 1rem;
   padding: 0.5rem;
   border: 1px solid transparent;
-  transition: all 0.15s ease;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 220ms ease,
+    transform 220ms ease;
   font-size: 0.9rem;
+}
+
+.project-link-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-link:hover {
@@ -93,8 +175,8 @@ a {
 }
 
 .footer {
-  margin-top: 3rem;
-  padding-top: 1rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .terminal-prompt {
@@ -118,14 +200,27 @@ a {
   color: var(--terminal-blue);
 }
 
-@media (max-width: 600px) {
-  .ascii-art {
-    font-size: 5px;
-    line-height: 5px;
+@keyframes cursor-blink {
+  0%, 49% {
+    opacity: 1;
   }
-  
-  .project-link {
-    flex-direction: column;
-    gap: 0.25rem;
+
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-live {
+    animation: none;
+  }
+
+  .output-block,
+  .ascii-line,
+  .shell-block,
+  .projects,
+  .project-link,
+  .footer {
+    transition: none;
   }
 }
