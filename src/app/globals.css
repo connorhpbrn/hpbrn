@@ -29,7 +29,7 @@ a {
 }
 
 .terminal {
-  --terminal-font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+  --terminal-font-size: clamp(0.95rem, 2.6vw, 0.95rem);
   --ascii-size: clamp(8px, 2.9vw, 14px);
   max-width: 680px;
   margin: 0 auto;
