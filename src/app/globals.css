@@ -18,6 +18,9 @@ html, body {
   background: var(--bg);
   min-height: 100vh;
   font-family: "IBM Plex Mono", "Fira Code", "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -26,6 +29,8 @@ a {
 }
 
 .terminal {
+  --terminal-font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+  --ascii-size: clamp(8px, 2.9vw, 14px);
   max-width: 680px;
   margin: 0 auto;
   padding: 2.5rem 1rem 3rem;
@@ -36,8 +41,9 @@ a {
   display: block;
   min-height: 1.5rem;
   color: var(--terminal-blue);
-  font-size: 0.95rem;
-  white-space: pre;
+  font-size: var(--terminal-font-size);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .prompt {
@@ -79,14 +85,15 @@ a {
 
 .title-wrap {
   margin: 0 0 1.6rem 0;
+  overflow: hidden;
 }
 
 .ascii-line {
   font-family: monospace;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: var(--ascii-size);
+  line-height: var(--ascii-size);
   text-align: left;
-  min-height: 14px;
+  min-height: var(--ascii-size);
   color: var(--terminal-blue);
   white-space: pre;
   opacity: 0;
@@ -186,6 +193,7 @@ a {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-left: 1rem;
   margin-bottom: 0.5rem;
